@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademik Takvim - Hacettepe Üniversitesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-pattern {
+            background-color: #f8f8f8;
+            background-image: linear-gradient(#ff000015 2px, transparent 2px),
+                              linear-gradient(to right, #ff000015 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-red-700 text-white py-6">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center">Akademik Takvim</h1>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">2024-2025 Öğretim Yılı Akademik Takvimi</h2>
+                <p class="text-gray-700 mb-4">
+                    Bu takvim, Yabancı Diller Yüksekokulu, Tıp ve Diş Hekimliği Fakülteleri dışında kalan tüm birimler için geçerlidir.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-red-700 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Tarih</th>
+                            <th class="py-3 px-4 text-left">Etkinlik</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="py-3 px-4">19-23 Ağustos 2024</td><td class="py-3 px-4">Yeni Kazanan Öğrencilerin Üniversiteye Kayıtları *</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">18-20 Eylül 2024</td><td class="py-3 px-4">Ders programlarının yapılması</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">16-20 Eylül 2024</td><td class="py-3 px-4">Yeni Kazanan Öğrencilerin Oryantasyon Dersi</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">23-29 Eylül 2024</td><td class="py-3 px-4">Mezuniyetine En Fazla Üç Dersi Kalan Öğrencilerin Sınavları</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">2-4 Ekim 2024</td><td class="py-3 px-4">Ekle-Sil Haftası</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">4 Ekim 2024</td><td class="py-3 px-4">Öğrenci Katkı Payı/Öğrenim Ücretlerinin ödenmesinin son günü</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">15 Ekim 2024</td><td class="py-3 px-4">Erasmus giden öğrencilerin geç ders kayıt son tarihi (Yönetim Kurulu Kararı ile)</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">23 Eylül - 29 Aralık 2024</td><td class="py-3 px-4">Tüm Programlarda Ders Başlangıç ve Bitiş Tarihleri</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">6-19 Ocak 2025</td><td class="py-3 px-4">Önlisans ve Lisans Programlarında Yarıyıl Genel Sınavları**</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">6-22 Ocak 2025</td><td class="py-3 px-4">Yarıyıl Genel Sınav Sonuçları Elektronik Ortamda İletilmesi</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">27 Ocak-02 Şubat 2025</td><td class="py-3 px-4">Bütünleme Sınavları</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">27 Ocak-05 Şubat 2025</td><td class="py-3 px-4">Bütünleme Sınav Sonuçlarının Elektronik Ortamda İletilmesi</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">20 Ocak - 11 Şubat 2025</td><td class="py-3 px-4">Yarıyıl Tatili</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">12-14 Şubat 2025</td><td class="py-3 px-4">Ders Programlarının Yapılması</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">17-23 Şubat 2025</td><td class="py-3 px-4">Mezuniyetine En Fazla Üç Dersi Kalan Öğrencilerin Sınavları</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">26-28 Şubat 2025</td><td class="py-3 px-4">Ekle-Sil Haftası</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">28 Şubat 2025</td><td class="py-3 px-4">Öğrenci Katkı Payı/Öğrenim Ücretlerinin ödenmesinin son günü</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">11 Mart 2025</td><td class="py-3 px-4">Erasmus giden öğrencilerin geç ders kayıt son tarihi (Yönetim Kurulu Kararı ile)</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">17 Şubat -25 Mayıs 2025</td><td class="py-3 px-4">Tüm Programlarda Ders Başlangıç ve Bitiş Tarihleri</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">10-22 Haziran 2025</td><td class="py-3 px-4">Önlisans ve Lisans Programlarında Yarıyıl Genel Sınavları**</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">10-25 Haziran 2025</td><td class="py-3 px-4">Yarıyıl Genel Sınav Sonuçlarının Elektronik Ortamda İletilmesi</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">30 Haziran-6 Temmuz 2025</td><td class="py-3 px-4">Bütünleme Sınavları</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">30 Haziran-9 Temmuz 2025</td><td class="py-3 px-4">Bütünleme Sınav Sonuçlarının Elektronik Ortamda İletilmesi</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">23 Haziran -...Eylül 2025</td><td class="py-3 px-4">Yaz Tatili</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="text-xl font-bold text-red-800 mb-2">Yandal/Çift Anadal Tarihleri</h3>
+                <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-red-700 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Tarih</th>
+                            <th class="py-3 px-4 text-left">Etkinlik</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="py-3 px-4">26 Ağustos 2024</td><td class="py-3 px-4">Güz Yarıyılı Yandal/Çift Anadal Kontenjanlarının Açıklanması</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">13 Eylül 2024</td><td class="py-3 px-4">Güz Yarıyılı Yandal/Çift Anadal Son Başvuru Tarihi</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">27 Eylül 2024</td><td class="py-3 px-4">Güz Yarıyılı Yandal/Çift Anadal Değerlendirme ve Sonuçların İlanı</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">20 Ocak 2025</td><td class="py-3 px-4">Bahar Yarıyılı Yandal/Çift Anadal Kontenjanlarının Açıklanması</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">7 Şubat 2025</td><td class="py-3 px-4">Bahar Yarıyılı Yandal/Çift Anadal Son Başvuru Tarihi</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">21 Şubat 2025</td><td class="py-3 px-4">Bahar Yarıyılı Yandal/Çift Anadal Değerlendirme ve Sonuçların İlanı</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6">
+                <h3 class="text-xl font-bold text-red-800 mb-2">Resmi Tatiller</h3>
+                <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <thead class="bg-red-700 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Tarih</th>
+                            <th class="py-3 px-4 text-left">Tatil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b"><td class="py-3 px-4">28-29 Ekim 2024***</td><td class="py-3 px-4">Cumhuriyet Bayramı</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">1 Ocak 2025</td><td class="py-3 px-4">Yılbaşı</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">29 Mart -01 Nisan 2025***</td><td class="py-3 px-4">Ramazan Bayramı</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">23 Nisan 2025</td><td class="py-3 px-4">Ulusal Egemenlik ve Çocuk Bayramı</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">1 Mayıs 2025</td><td class="py-3 px-4">Emek ve Dayanışma Günü</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">19 Mayıs 2025</td><td class="py-3 px-4">Atatürk'ü Anma Gençlik ve Spor Bayramı</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">05-09 Haziran 2025***</td><td class="py-3 px-4">Kurban Bayramı</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">15 Temmuz 2025</td><td class="py-3 px-4">Demokrasi ve Milli Birlik Günü</td></tr>
+                        <tr class="border-b"><td class="py-3 px-4">30 Ağustos 2025</td><td class="py-3 px-4">Zafer Bayramı</td></tr>
+                        <tr class="border-b bg-gray-50"><td class="py-3 px-4">28-29 Ekim 2025***</td><td class="py-3 px-4">Cumhuriyet Bayramı</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-6 text-sm text-gray-600">
+                <p>*: - ÖSYM (Ölçme, Seçme ve Yerleştirme Merkezi) tarafından ilan edilmektedir.</p>
+                <p>   - Özel Yetenek Sınavı ile öğrenci alan programların kayıt günleri ilgili Fakültelerde ilan edilecektir.</p>
+                <p>   - Uluslararası öğrencilerin kayıt tarihleri ÖİDB web sayfasında ilan edilmektedir.</p>
+                <p>**: Azami Öğrenim Süresini Dolduran Öğrencilerin Ek/Sınırsız Sınavları da aynı tarihlerde yapılacaktır.</p>
+                <p>***: Yarım Gün</p>
+                <p>Yarım veya tam gün tatillerinde sınav yapılamaz.</p>
+            </div>
+
+            <div class="mt-6 text-center">
+                <p class="text-gray-700">
+                    Detaylı akademik takvim için 
+                    <a href="https://oidb.hacettepe.edu.tr/tr/akademik_takvim_20242025-647" target="_blank" class="text-red-600 hover:underline font-bold">
+                        tıklayınız
+                    </a>.
+                </p>
+            </div>
+        </main>
+
+        <footer class="bg-red-700 text-white py-4 mt-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2024 <a href='https://akiner.net'>Akıner Kısa</a>. <a href='hakkinda.html'>Site Hakkında</a></p>
+                <a href="index.html" class="text-white hover:text-gray-200 mt-2 inline-block">Ana Sayfaya Dön</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

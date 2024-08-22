@@ -1,1 +1,77 @@
-x
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacettepe Üniversitesi Bilgilendirme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .bg-pattern {
+            background-color: #f8f8f8;
+            background-image: linear-gradient(#ff000015 2px, transparent 2px),
+                              linear-gradient(to right, #ff000015 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        .info-box {
+            background-color: white;
+            border-left: 4px solid #dc2626;
+            transition: all 0.3s ease;
+        }
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen">
+    <div id="app" class="min-h-screen flex flex-col">
+        <header class="bg-red-700 text-white py-6">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center">Hacettepe Üniversitesi Bilgilendirme</h1>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div v-for="info in infoBoxes" :key="info.title" 
+                     class="info-box rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-red-800 mb-2">{{ info.title }}</h2>
+                    <p class="text-gray-700">{{ info.description }}</p>
+                    <a v-if="info.link" :href="info.link" 
+                       class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
+                        {{ info.linkText || 'Daha fazla bilgi' }}
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-red-700 text-white py-4 mt-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2024 <a href='https://akiner.net'>Akıner Kısa</a>. <a href='hakkinda.html'>Site Hakkında</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    infoBoxes: [ 
+                        {title: 'Tercih Dönemi', description: 'Üniversite tercih dönemine ilişkin önemli bilgiler ve tarihler.', link: 'tercih-donemi.html', linkText: 'Tercih Bilgilerini Gör' },
+                        { title: 'Kayıt İşlemleri', description: 'Yeni öğrenciler için kayıt prosedürleri ve gerekli belgeler.', link: 'kayit-islemleri.html', linkText: 'Kayıt Bilgilerini Gör' },
+                        { title: 'Barınma Olanakları', description: 'Beytepe kampüs içi konaklama seçenekleri hakkında bilgiler.', link: 'barinma.html', linkText: 'Barınma Olanaklarını Gör' },
+                        { title: 'Spor Olanakları', description: 'Üniversitemizdeki spor tesisleri ve aktiviteleri.', link: 'spor-olanaklari.html', linkText: 'Spor Olanaklarını Gör'  },
+                        { title: 'Hazırlık Sınıfı', description: 'Yabancı dil hazırlık eğitimi hakkında bilgiler ve program detayları.', link: 'hazirlik.html', linkText: 'Hazırlık Programı Hakkında Bilgi' },
+                        { title: 'Kampüs Olanakları', description: 'Kütüphane, yemekhane ve diğer öğrenci hizmetleri.', link: 'kampus-olanaklari.html', linkText: 'Kampüs Olanaklarını Gör' },
+                        { title: 'Öğrenci Kulüpleri', description: 'Aktif öğrenci kulüpleri ve kulüplerin iletişim bilgileri.', link: 'ogrenci-kulupleri.html', linkText: 'Kulüpleri Gör' },
+                        { title: 'Akademik Takvim', description: 'Güncel akademik yıl takvimi ve önemli tarihler.', link: 'akademik-takvim.html', linkText: 'Akademik Takvimi Gör' }
+                    ]
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>

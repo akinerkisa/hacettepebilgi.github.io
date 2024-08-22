@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt İşlemleri - Hacettepe Üniversitesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .bg-pattern {
+            background-color: #f8f8f8;
+            background-image: linear-gradient(#ff000015 2px, transparent 2px),
+                              linear-gradient(to right, #ff000015 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen">
+    <div id="app" class="min-h-screen flex flex-col">
+        <header class="bg-red-700 text-white py-6">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center">Kayıt İşlemleri</h1>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Önemli Linkler</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li v-for="link in importantLinks" :key="link.text">
+                        <a :href="link.url" class="text-red-600 hover:underline" target="_blank">{{ link.text }}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Önemli Tarihler</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li v-for="date in importantDates" :key="date">{{ date }}</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Hatırlatma</h2>
+                <p class="text-gray-700">{{ reminder }}</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Önemli Not</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li v-for="note in importantNotes" :key="note">{{ note }}</li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-gray-600">Kaynak: <a href="https://yenikazanan2.hacettepe.edu.tr/" class="text-red-600 hover:underline" target="_blank">https://yenikazanan2.hacettepe.edu.tr/</a></p>
+            </div>
+        </main>
+
+        <footer class="bg-red-700 text-white py-4 mt-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2024 <a href='https://akiner.net'>Akıner Kısa</a>. <a href='hakkinda.html'>Site Hakkında</a></p>
+                <a href="index.html" class="text-white hover:text-gray-200 mt-2 inline-block">Ana Sayfaya Dön</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    importantLinks: [
+                        { text: 'Hacettepe Üniversitesi web sayfası', url: 'https://www.hacettepe.edu.tr' },
+                        { text: 'Öğrenci İşleri Daire Başkanlığı web sayfası', url: 'https://oidb.hacettepe.edu.tr' },
+                        { text: 'Barınma olanakları hakkında detaylı bilgi için', url: 'https://sksdb.hacettepe.edu.tr' },
+                        { text: 'Yabancı dil hazırlık sınıfı yeterlik ve düzey belirleme sınavları hakkında bilgi için', url: 'https://ydyo.hacettepe.edu.tr' },
+                        { text: 'Temel Bilgi ve İletişim Teknolojileri Kullanımı (BEB 650) Dersi Muafiyet Sınavı hakkında bilgi için', url: 'https://bilisim.hacettepe.edu.tr/' },
+                        { text: '(16-20 Eylül 2024) ÜNİ101 Üniversite Yaşamına Giriş dersi hakkında bilgi için', url: 'https://uni101.hacettepe.edu.tr' },
+                        { text: 'Eğitim-Öğretim ve Sınav Yönetmeliği için Tıp Fakültesi', url: '#' },
+                        { text: 'Eğitim-Öğretim ve Sınav Yönetmeliği için Diş Hekimliği', url: '#' },
+                        { text: 'Eğitim-Öğretim ve Sınav Yönetmeliği için Tıp ve Diş Hekimliği Fakülteleri haricindeki programlar', url: '#' },
+                        { text: 'Akademik Takvim için Tıp Fakültesi', url: '#' },
+                        { text: 'Akademik Takvim için Diş Hekimliği Fakültesi', url: '#' },
+                        { text: 'Akademik Takvim için Tıp ve Diş Hekimliği Fakülteleri haricindeki programlar / Yabancı Diller Yüksekokulu', url: '#' },
+                    ],
+                    importantDates: [
+                        'Zorunlu Hazırlık Sınıfı için Yabancı Dil Muafiyet Sınavı ve Düzey Belirleme ile İsteğe Bağlı Hazırlık Programları için Düzey Belirleme Sınavı 09-15 Eylül 2024 Bkz. https://ydyo.hacettepe.edu.tr',
+                        'Ortak Zorunlu Yabancı Dil Dersleri Muafiyet Sınavı başvuruları 16-17 Eylül 2024 sınavı 24 Eylül 2024 Bkz. https://ydyo.hacettepe.edu.tr',
+                        'Temel Bilgi ve İletişim Teknolojileri Kullanımı (BEB 650) Dersi Muafiyet Sınavı Başvuru Tarihleri 12-13 Eylül 2024 Bkz. https://bilisim.hacettepe.edu.tr/',
+                        'Temel Bilgi ve İletişim Teknolojileri Kullanımı (BEB 650) Dersi muafiyet sınavı 25 Eylül 2024 Bkz. https://bilisim.hacettepe.edu.tr/',
+                        'İkinci üniversite katkı payı ödemesinin son günü 04 Ekim 2024',
+                        'Ders Kayıt Haftası (Tıp Fakültesi hariç) 18-20 Eylül 2024'
+                    ],
+                    reminder: 'Öğrenci kimlik kartlarınızı Öğrenci İşleri Daire Başkanlığı\'nın web sayfasında duyurulacak tarihten itibaren kayıtlı olduğunuz bölümden/programdan alabilirsiniz.',
+                    importantNotes: [
+                        'Üniversite kayıtlarından sonra ŞİFRE İŞLEMLERİ (tıklayınız) sayfasından "BİLSİS Şifresi Alma İşlemleri" kılavuzunu inceleyerek öğrenci numaranız ve öğrenci bilgi sistemi şifreniz için işlemlerinizi yapabilirsiniz',
+                        '@hacettepe.edu.tr uzantılı e-posta adresleriniz, kayıt işleminden 24 saat sonra Bilgi İşlem Daire Başkanlığı tarafından oluşturularak, ÖSYM Başkanlığından tarafımıza aktarılan e-posta adreslerinize iletilecektir.',
+                        'Tarafına SMS veya eposta ulaşmayan öğrencilerimiz https://portal.hacettepe.edu.tr adresinden "Kullanıcı Adımı Unuttum" , "Şifremi Unuttum" buttonlarını kullanarak kurumsal E-posta adreslerini öğrenebilirler.'
+                    ]
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
