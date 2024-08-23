@@ -13,15 +13,6 @@
                               linear-gradient(to right, #ff000015 2px, transparent 2px);
             background-size: 40px 40px;
         }
-        .info-box {
-            background-color: white;
-            border-left: 4px solid #dc2626;
-            transition: all 0.3s ease;
-        }
-        .info-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
     </style>
 </head>
 <body class="bg-pattern min-h-screen">
@@ -33,9 +24,14 @@
         </header>
 
         <main class="flex-grow container mx-auto px-4 py-8">
+            <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 shadow-md">
+                <p class="font-bold">Güncel Haber: Yurt başvuruları açıldı</p>
+                <p class="mt-2">Başvuru linki için<a href="https://yurt2.hacettepe.edu.tr/yurtx/home.faces" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div v-for="info in infoBoxes" :key="info.title" 
-                     class="info-box rounded-lg shadow-md p-6">
+                     class="info-box bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-bold text-red-800 mb-2">{{ info.title }}</h2>
                     <p class="text-gray-700">{{ info.description }}</p>
                     <a v-if="info.link" :href="info.link" 
