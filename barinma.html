@@ -22,7 +22,12 @@
                 <h1 class="text-4xl font-bold text-center">Barınma Olanakları</h1>
             </div>
         </header>
-
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-6 mx-auto max-w-4xl">
+            <p class="font-bold">Önemli Notlar:</p>
+            <ul class="list-disc list-inside mt-2">
+                <li>Sıhhiye İçin Bilgilendirme: Sıhhiye Öğrenci Evleri, Konukevi-1, Konukevi-2 ve Asistan bloklarında boş öğrenci kontenjanı olmadığından tercihlerinizde görünmeyecektir. İkinci açılacak başvuru dönemi içinde boş kontenjan olması halinde yukarıda belirtilen barınma birimlerine tercih açılabilir.</li>
+            </ul>
+        </div>
         <main class="flex-grow container mx-auto px-4 py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div v-for="option in housingOptions" :key="option.title" 
@@ -54,8 +59,8 @@
                 return {
                     housingOptions: [
                         {
-                            title: 'Hacettepe Yurt ve Öğrenci Evleri',
-                            description: 'Üniversitemizin sunduğu konaklama seçenekleri.',
+                            title: 'Beytepe Yurt ve Öğrenci Evleri',
+                            description: 'Üniversitemizin beytepe kampüsünde sunduğu konaklama seçenekleri.',
                             features: [
                                 { text: 'Yurtlar Hakkında Bilgi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=16&title=beytepe-ogrenci-yurtlari' },
                                 { text: 'Öğrenci Evleri Hakkında Bilgi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=18&title=beytepe-ogrenci-evleri' },
@@ -67,8 +72,22 @@
                             ]
                         },
                         {
+                            title: 'Sıhhiye Yurt, Öğrenci ve Konuk Evleri',
+                            description: 'Üniversitemizin sıhhiye kampüsünde sunduğu konaklama seçenekleri.',
+                            features: [
+                            { text: 'Yurtlar Hakkında Bilgi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=16&title=beytepe-ogrenci-yurtlari' },
+                            { text: 'Öğrenci Evleri Hakkında Bilgi - Sayfası Yok', link: '#' },
+                            { text: 'Konuk Evleri Hakkında Bilgi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=1043&title=konukevleri'},
+                            { text: 'Güncel Ücretler', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=15&title=barinma-birimleri-ucretleri' },
+                            { text: 'Barınma Birimleri Yönergesi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=12&title=barinma-birimleri-yonergesi' },
+                            { text: 'Barınma Birimleri Kayıt Evrak Listesi', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=58422&title=2024-2025-yili-barinma-birimleri-kayit-evraklari'},
+                            { text: 'Başvuru Sayfası', link: 'https://yurt2.hacettepe.edu.tr/yurtx/home.faces'},
+                            { text: 'Başvuru Önemli Bilgilendirme', link: 'https://sksdb.hacettepe.edu.tr/bidbnew/post.php?id=58423&title=online-basvuru-barinma-birimleri-2024-2025-egitim-ogretim-donemi'}
+                            ]
+                        },
+                        {
                             title: 'KYK Yurtları',
-                            description: 'Kampüs içindeki Kredi ve Yurtlar Kurumu tarafından sağlanan yurt imkanları.',
+                            description: 'Beytepe kampüsü içindeki Kredi ve Yurtlar Kurumu tarafından sağlanan yurt imkanları.',
                             features: [
                                 { text: 'Emine Şerife Hanım Kız KYK Öğrenci Yurdu', link: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14d34775f21f7c7d:0x77b03eeb68aa5d0e' },
                                 { text: 'Beytepe KYK Kız KYK Öğrenci Yurdu', link: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14d347c586460d6d:0xd132d49c8a57d186' }
@@ -76,7 +95,7 @@
                         },
                         {
                             title: 'Özel Yurtlar',
-                            description: 'Kampüsteki özel yurt seçenekleri.',
+                            description: 'Beytepe Kampüsündeki özel yurt seçenekleri.',
                             features: [
                                 { text: 'Atatepe Yurdu', link: 'https://www.atatepe.com.tr/' },
                                 { text: 'Parlar Kız Öğrenci Yurdu', link: 'https://parlarogrencievi.org.tr/' },

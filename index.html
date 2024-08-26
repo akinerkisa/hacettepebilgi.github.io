@@ -24,9 +24,10 @@
         </header>
 
         <main class="flex-grow container mx-auto px-4 py-8">
+            <!-- Bilgilendirme kutucuğu -->
             <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 shadow-md">
                 <p class="font-bold">Güncel Haber: Yurt başvuruları açıldı</p>
-                <p class="mt-2">Başvuru linki için<a href="https://yurt2.hacettepe.edu.tr/yurtx/home.faces" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
+                <p class="mt-2">Detaylı bilgi için <a href="#" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -56,10 +57,12 @@
             data() {
                 return {
                     infoBoxes: [ 
-                        {title: 'Tercih Dönemi', description: 'Üniversite tercih dönemine ilişkin önemli bilgiler ve tarihler.', link: 'tercih-donemi.html', linkText: 'Tercih Bilgilerini Gör' },
+                        { title: 'Sıkça Sorulan Sorular', description: 'Öğrencilerin en çok merak ettiği konular hakkında bilgiler. - Şimdilik yapımda.', link: '#', linkText: 'Sıkça Sorulan Soruları' },
+                        { title: 'Tercih Dönemi', description: 'Üniversite tercih dönemine ilişkin önemli bilgiler ve tarihler.', link: 'tercih-donemi.html', linkText: 'Tercih Bilgilerini Gör' },
                         { title: 'Kayıt İşlemleri', description: 'Yeni öğrenciler için kayıt prosedürleri ve gerekli belgeler.', link: 'kayit-islemleri.html', linkText: 'Kayıt Bilgilerini Gör' },
                         { title: 'Barınma Olanakları', description: 'Beytepe kampüs içi konaklama seçenekleri hakkında bilgiler.', link: 'barinma.html', linkText: 'Barınma Olanaklarını Gör' },
-                        { title: "Çevredeki KYK'lar", description: 'Beytepe kampüsü çevresindeki KYK yurtlarını inceleyin', link: 'cevredeki-kyklar.html', linkText: "KYK'ları Gör" },
+                        { title: "Beytepe Çevresindeki KYK'lar", description: 'Beytepe kampüsü çevresindeki KYK yurtlarını inceleyin', link: 'cevredeki-kyklar.html', linkText: "KYK'ları Gör" },
+                        { title: "Sıhhiye Çevresindeki KYK'lar", description: 'Sıhhiye kampüsü çevresindeki KYK yurtlarını inceleyin', link: 's-cevredeki-kyklar.html', linkText: "KYK'ları Gör" },
                         { title: 'Spor Olanakları', description: 'Üniversitemizdeki spor tesisleri ve aktiviteleri.', link: 'spor-olanaklari.html', linkText: 'Spor Olanaklarını Gör'  },
                         { title: 'Hazırlık Sınıfı', description: 'Yabancı dil hazırlık eğitimi hakkında bilgiler ve program detayları.', link: 'hazirlik.html', linkText: 'Hazırlık Programı Hakkında Bilgi' },
                         { title: 'Kampüs Olanakları', description: 'Kütüphane, yemekhane ve diğer öğrenci hizmetleri.', link: 'kampus-olanaklari.html', linkText: 'Kampüs Olanaklarını Gör' },
