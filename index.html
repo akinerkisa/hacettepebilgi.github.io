@@ -26,8 +26,15 @@
         <main class="flex-grow container mx-auto px-4 py-8">
             <!-- Bilgilendirme kutucuğu -->
             <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 shadow-md">
-                <p class="font-bold">Güncel Haber: Yurt başvuruları açıldı</p>
-                <p class="mt-2">Başvuru linki için <a href="https://yurt2.hacettepe.edu.tr/yurtx/home.faces" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
+                <p class="font-bold">Güncel Haber: Barınma Birimlerinde Kalmaya Hak Kazananların 1. Listesi Açıklandı</p>
+                <p class="mt-2">Liste için <a href="http://sksdb.hacettepe.edu.tr/files/barinma/2024-2025-barinma-birimlerine-hak-kazananlar-liste-1-pdf-133694387949771504.pdf" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
+                <p class="mt-2">Kayıt yönergesi:</p>
+                <button id="toggleButton" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
+                    Kayıt Yönergesini Göster/Gizle
+                </button>
+                <div id="imageContainer" class="mt-2 hidden">
+                    <img src="barinmalistesi.png" alt="Kayıt Yönergesi">
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -57,6 +64,7 @@
             data() {
                 return {
                     infoBoxes: [ 
+                        { title: 'Geçmiş Haberler', description: 'Haber kutusundaki geçmiş haberler.', link: 'gecmis-haberler.html', linkText: 'Geçmiş Haberler' },
                         { title: 'Sıkça Sorulan Sorular', description: 'Öğrencilerin en çok merak ettiği konular hakkında bilgiler. - Şimdilik yapımda.', link: '#', linkText: 'Sıkça Sorulan Soruları' },
                         { title: 'Tercih Dönemi', description: 'Üniversite tercih dönemine ilişkin önemli bilgiler ve tarihler.', link: 'tercih-donemi.html', linkText: 'Tercih Bilgilerini Gör' },
                         { title: 'Kayıt İşlemleri', description: 'Yeni öğrenciler için kayıt prosedürleri ve gerekli belgeler.', link: 'kayit-islemleri.html', linkText: 'Kayıt Bilgilerini Gör' },
@@ -72,6 +80,20 @@
                 }
             }
         }).mount('#app')
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggleButton');
+            const imageContainer = document.getElementById('imageContainer');
+    
+            toggleButton.addEventListener('click', function() {
+                if (imageContainer.classList.contains('hidden')) {
+                    imageContainer.classList.remove('hidden');
+                } else {
+                    imageContainer.classList.add('hidden');
+                }
+            });
+        });
     </script>
 </body>
 </html>
