@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular - Hacettepe Üniversitesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-pattern {
+            background-color: #f8f8f8;
+            background-image: linear-gradient(#ff000015 2px, transparent 2px),
+                              linear-gradient(to right, #ff000015 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        .news-content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-red-700 text-white py-6">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center">Sıkça Sorulan Sorular</h1>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <p class="text-lg text-gray-700 mb-6">Bu sayfada öğrencilerin sıkça sordukları soruların cevaplarını bulabilirsiniz.</p>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- Sorular buraya dinamik olarak eklenecek -->
+            </div>
+        </main>
+
+        <footer class="bg-red-700 text-white py-4 mt-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2024 Hacettepe Üniversitesi. Tüm hakları saklıdır.</p>
+                <a href="index.html" class="text-white hover:text-gray-200 mt-2 inline-block">Ana Sayfaya Dön</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const faqData = [
+            {
+                question: "Oryantasyona katılmam zorunlu mu?",
+                answer: `Bu yıl katılmanız zorunlu değil ama UNI101 dersi zorunlu. Üniversite hayatınız boyunca bir kere almanız gereken bir ders UNI101 ve bu dersi oryantasyonda alıyorsunuz, yeni kayıt yapmış bir öğrenciyseniz almanızı öneririz ancak sonraki yıllarda da bu UNI101 dersini alabilirsiniz. 
+                         <br>UNI101 hakkında daha fazla bilgi için <a href="https://uni101.hacettepe.edu.tr" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.`
+            },
+            {
+                question: "Dersler ne zaman başlıyor?",
+                answer: `Oryantasyon 16 Eylül'de, bölüm dersleri ise 23 Eylül'de başlıyor.
+                         <br>Bunun gibi soruların cevaplarına akademik takvimden erişebilirsiniz. Akademik takvime erişmek için <a href="akademik-takvim.html" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.`
+            },
+            {
+                question: "Kayıt işlemlerini nasıl yapabilirim?",
+                answer: "Kayıt işlemlerini e-Devlet üzerinden gerçekleştirebilirsiniz. E-kayıt yaptıktan sonra, başka bir işlem yapmanıza gerek yoktur."
+            },
+            {
+                question: "Hazırlık seviye belirleme sınavına nerede gireceğim?",
+                answer: 'Hazırlık sınavına hangi bina ve hangi derslikte gireceğinizi öğrenmek için <a href="https://ydyo.hacettepe.edu.tr/tr/%3Cimg_src=fshacettepeedutrydyor-1631" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.'
+            },
+            {
+                question: "Hazırlık sınıfı muafiyet sınavı ne zaman?",
+                answer: 'Hazırlık sınıfı muafiyet sınavı 9-15 Eylül tarihleri arasında yapılacaktır. Kesin tarih ve detaylar için <a href="hazirlik.html" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.'
+            },
+            {
+                question: "Zorunlu hazırlık atlama/muafiyet sınavına nasıl başvurabilirim?",
+                answer: "Zorunlu hazırlık atlama sınavına başvuru yapmanıza gerek yoktur. Düzey belirleme sınavından yeterli notu alırsanız otomatik olarak dahil edilirsiniz, Yabancı Diller Yüksekokulu muafiyet sınavına girmeye hak kazanan öğrencileri duyuracaktır."
+            },
+            {
+                question: "Kredi sistemi nasıl işliyor?",
+                answer: "İlk yıl her dönem 30 kredi, diğer yıllar ise dönem başına 40 kredi almanız gerekir. Toplamda 240 krediyi tamamlamalısınız."
+            },
+            {
+                question: "Hazırlık sınıfı zorunlu mu?",
+                answer: 'Eğer bölümünüz %100 veya %30 İngilizce ise zorunludur. Değilse isteğe bağlı hazırlık alabilirsiniz. Detaylı bilgi için <a href="hazirlik.html" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.'
+            },
+            {
+                question: "Öğrenci e-postamı nasıl alabilirim?",
+                answer: 'Kayıt olduktan sonra size SMS ile Hacettepe uzantılı e-posta bilgileri gelecektir. Eğer gelmediyse <a href="https://portal.hacettepe.edu.tr" class="underline text-blue-600 hover:text-blue-800">Hacettepe Portal</a> üzerinden kullanıcı adı ve şifre alıp erişebilirsiniz.'
+            },
+            {
+                question: "Hazırlık seviye belirleme sınavı online mı yoksa yüz yüze mi?",
+                answer: 'Hazırlık seviye belirleme sınavı yüz yüze yapılacaktır. Hazırlık hakkında detaylı bilgi için <a href="hazirlik.html" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.'
+            },
+            {
+                question: "Beytepe'de hangi bölümler var?",
+                answer: `Beytepe kampüsünde sağlık bölümleri ve meslek yüksek okulları dışındaki çoğu bölüm yer almaktadır.`
+            },
+            {
+                question: "Yurt çıkmazsa ne yapabilirim?",
+                answer: "Kampüse yakın birçok özel yurt ve öğrenci evi seçeneği bulunmaktadır. Parlar ve Atatepe gibi özel yurtları değerlendirebilirsiniz."
+            },
+            {
+                question: "Online kayıt yeterli mi, ayrıca yüz yüze işlem yapmam gerekiyor mu?",
+                answer: "E-kayıt işlemi yeterlidir. Yüz yüze işlem yapmanıza gerek yoktur."
+            },
+            {
+                question: "Kampüste servis var mı?",
+                answer: "Okul servisi ihaleyle belirlenir ve dönem başında açıklanır. Şu an için kesin bilgi bulunmamaktadır."
+            },
+            {
+                question: "Okul yemekhanesi akşamları açık mı?",
+                answer: "Hacettepe Üniversitesi yemekhanesi 3 öğün yemek vermektedir. Saat 19.00'da kapanmaktadır."
+            },
+            {
+                question: "Beytepe yurdu ve KYK yurdu aynı anda başvuru yapılabilir mi?",
+                answer: "Evet, hem Hacettepe yurtlarına hem de KYK yurtlarına başvuru yapabilirsiniz. Her iki yurda da kabul edildiğinizde birini tercih edebilirsiniz."
+            },
+            {
+                question: "Ders seçimi ne zaman ve nasıl yapılacak?",
+                answer: 'Ders seçimi tarihleri akademik takvimde belirtilmiştir. Kesin tarih ve detaylar için <a href="akademik-takvim.html" class="underline text-blue-600 hover:text-blue-800">buraya tıklayınız</a>.'
+            }
+            // Buraya yeni sorular ve cevaplar ekleyebilirsiniz
+        ];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqContainer = document.getElementById('faq-container');
+
+            faqData.forEach((item, index) => {
+                const faqItem = `
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button onclick="toggleNews('news${index + 1}')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
+                            <span>${item.question}</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="news${index + 1}" class="news-content px-6 py-4 bg-red-50">
+                            <p>${item.answer}</p>
+                        </div>
+                    </div>
+                `;
+                faqContainer.innerHTML += faqItem;
+            });
+        });
+
+        function toggleNews(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const icon = button.querySelector('svg');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.display = "block";
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
