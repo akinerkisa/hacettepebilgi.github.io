@@ -29,31 +29,46 @@
             <p class="text-lg text-gray-700 mb-6">Bu sayfada ana sayfada yer alan haberlerin arşivini bulabilirsiniz.</p>
 
             <div class="space-y-4">
-                <!-- İlk Haber -->
                 <div class="bg-white rounded-lg shadow-md">
                     <button onclick="toggleNews('news1')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
+                        <span>9 Eylül - Hazırlık Birimleri Yönergesi Açıklandı</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="news1" class="news-content px-6 py-4 bg-red-50" style="display: none;">
+                        <p class="mt-2">Yönerge için <a href="https://fs.hacettepe.edu.tr/ydyo/2024-2025%20E%C4%9E%C4%B0T%C4%B0M%20%C3%96%C4%9ERET%C4%B0M%20YILI/ING%20YONERGE.pdf" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <button onclick="toggleNews('news2')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
+                        <span>8 Eylül 2024 - Bölüm Tanıtım Yer ve Tarihleri Açıklandı</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="news2" class="news-content px-6 py-4 bg-red-50" style="display: none;">
+                        <p class="mt-2">Liste için <a href="https://uni101.hacettepe.edu.tr/bolum-tanitimlari-2024/" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>        
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md">
+                    <button onclick="toggleNews('news3')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
                         <span>29 Ağustos 2024 - Barınma Birimlerinde Kalmaya Hak Kazananların 1. Listesi Açıklandı</span>
                         <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="news1" class="news-content px-6 py-4 bg-red-50">
+                    <div id="news3" class="news-content px-6 py-4 bg-red-50" style="display: none;">
                         <p class="mt-2">Liste için <a href="http://sksdb.hacettepe.edu.tr/files/barinma/2024-2025-barinma-birimlerine-hak-kazananlar-liste-1-pdf-133694387949771504.pdf" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
                         <p class="mt-2">Kayıt yönergesi:</p>
                         <button onclick="toggleGuideline()" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-300">
                             Kayıt Yönergesini Göster/Gizle
                         </button>
-                        <div id="guideline" class="guideline-content mt-2">
+                        <div id="guideline" class="guideline-content mt-2" style="display: none;">
                             <img src="../assets/barinmalistesi2024.png" alt="Kayıt Yönergesi">
                         </div>
                     </div>
                 </div>
-
-                <!-- İkinci Haber -->
                 <div class="bg-white rounded-lg shadow-md">
-                    <button onclick="toggleNews('news2')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
+                    <button onclick="toggleNews('news4')" class="w-full text-left px-6 py-4 font-bold text-lg text-red-800 hover:bg-red-50 focus:outline-none flex justify-between items-center">
                         <span>23-27 Ağustos 2024 - Yurt başvuruları açıldı</span>
                         <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="news2" class="news-content px-6 py-4 bg-red-50">
+                    <div id="news4" class="news-content px-6 py-4 bg-red-50" style="display: none;">
                         <p>Başvuru linki için <a href="https://yurt2.hacettepe.edu.tr/yurtx/home.faces" class="underline text-blue-600 hover:text-blue-800">tıklayınız</a>.</p>
                     </div>
                 </div>
